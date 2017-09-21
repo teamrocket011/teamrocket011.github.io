@@ -1,4 +1,41 @@
 <style>
+
+/* Style the tab */
+div.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+div.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+div.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+div.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border-top: none;
+}
+
 body {
   background: #121517;
 }
@@ -9,13 +46,11 @@ h1 {
 	text-align: center;
 }
 p {
-
 	color: #FFFFFF;
 	font-family: arial;
 	font-size: 24px;
 }
 img {
-    margin-left: 45%;
     vertical-align: middle;
 }
 .card {
@@ -46,10 +81,47 @@ img {
 </head>
 <body>
 	<h1>SpaceX Dragon</h1>
-	<img src="img/nose-cone3.png"/><br><br>
-<!-- <img style="margin-left:42.5%" src="img/spacecraft.png"/><br> -->
-<div class="card1"></div>
-<br>
-<div class="card"></div>
-<!-- <img style="margin-left:24.5%" src="img/solar-seq.gif"/> -->
+
+
+	<img  style="margin-left: 45%;" src="img/nose-cone3.png"/><br><br>
+  <div class="card1"></div>
+  <br>
+  <div class="card"></div>
+  <br>
+  <br>
+  
+  <div class="tab">
+    <button class="tablinks" onclick="openCity(event, 'Cargo')">Cargo</button>
+    <button class="tablinks" onclick="openCity(event, 'Crew')">Crew</button>
+    <button class="tablinks" onclick="openCity(event, 'DragonLab')">DrogonLab</button>
+  </div>
+
+  <div id="Cargo" class="tabcontent">
+    <img alt="Cargo" height="500" src="img/dragon-intertior.jpg" width="1059">
+  </div>
+
+  <div id="Crew" class="tabcontent">
+    <img alt="Crew" height="500" src="img/dragon-v2-interior-wide-cropped.jpg" width="1050">
+  </div>
+
+  <div id="DragonLab" class="tabcontent">
+    <img alt="DragonLab" height="500" src="img/dragon-lab.jpg" width="1050">
+  </div>
+
+  <script>
+  function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+      }
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+  }
+  </script>
+
 </body>
