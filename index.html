@@ -18,19 +18,38 @@ img {
     margin-left: 45%;
     vertical-align: middle;
 }
+.card {
+    width: 100%;
+    height: 195px;
+    background: url("img/trunk.png") no-repeat;
+    margin-left: 42.5%;
+}
+.card:hover {
+    margin-left: 24.5%;
+    background: url("img/solar-seq.gif") no-repeat;
+}
+
+.card1 {
+    width: 100%;
+    height: 195px;
+    background: url("img/spacecraft.png") no-repeat;
+    margin-left: 42.5%;
+}
+.card1:hover {
+    margin-left: 43.5%;
+    background: url("img/dragon-spacecraft-line-drawing.png") no-repeat;
+}
+
 </style>
 <head>
     <title>Team Rocket</title>
 </head>
 <body>
 	<h1>SpaceX Dragon</h1>
-	<p>
-    		Dragon is a free-flying spacecraft designed to deliver both cargo and people to orbiting destinations. Dragon made history in 2012 when it became the first commercial spacecraft<br/>
-		in history to deliver cargo to the International Space Station and safely return cargo to Earth, a feat previously achieved only by governments. It is the only spacecraft currently<br/>
-		flying that is capable of returning significant amounts of cargo to Earth. Currently Dragon carries cargo to space, but it was designed from the beginning to carry humans. Under an<br/>
-		agreement with NASA, SpaceX is now developing the refinements that will enable Dragon to fly crew. Dragon's first manned test flight is expected to take place as early as 2018.<br/>
-  </p>
-<img src="img/nose-cone3.png"/><br><br>
-<img style="margin-left:42.5%" src="img/spacecraft.png"/><br>
-<img style="margin-left:24.5%" src="img/solar-seq.gif"/>
+	<img src="img/nose-cone3.png"/><br><br>
+<!-- <img style="margin-left:42.5%" src="img/spacecraft.png"/><br> -->
+<div class="card1"></div>
+<br>
+<div class="card"></div>
+<!-- <img style="margin-left:24.5%" src="img/solar-seq.gif"/> -->
 </body>
