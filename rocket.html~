@@ -69,7 +69,9 @@ a.button2:hover {
 }
 </style>
 <body>
+<div>
 <a href="https://teamrocket011.github.io/home.html" class="button">Get Started!</a>
+</div>
 <div class="rocket">
 <img src="https://maxcdn.icons8.com/Share/icon/Transport//rocket1600.png" alt="rocket" width="20%">
 </div>
